@@ -1,0 +1,4 @@
+configuration,accuracy,precision,recall,f1
+Word TF-IDF only,0.7704,0.7211,1.0,0.838
+Word + Char TF-IDF,0.7935,0.7419,1.0,0.8519
+Full Model (Word + Char + Cues),1.0,1.0,1.0,1.0

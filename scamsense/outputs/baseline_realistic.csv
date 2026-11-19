@@ -1,0 +1,81 @@
+text,label,kind,prob,verdict,correct
+Income tax refund of Rs 8500 approved. Click here to submit your bank account details to receive it: incometax-refund-portal.in/claim,1,income_tax_refund,0.8213,SCAM,1
+"Congratulations! Aapka income tax refund Rs 12,000 process ke liye ready hai. Abhi apni bank details bhejein: taxrefund-india.xyz",1,income_tax_refund,0.9938,SCAM,1
+"IT dept: Refund of Rs 6,750 approved for PAN ABCDE1234F. Collect by clicking: www.it-refund-dept.in/verify aur apna OTP daalein",1,income_tax_refund,0.9388,SCAM,1
+"Dear taxpayer, your ITR refund Rs 3,200 is pending. Provide IFSC and account number at this link to process: tinyurl.com/tax-refund99",1,income_tax_refund,0.9563,SCAM,1
+Aapka parcel FedEx warehouse me ruka hua hai. Rs 149 customs clearance fee pay karein warna parcel wapas chala jayega: bit.ly/parcel-clr,1,parcel_customs_fee,0.9624,SCAM,1
+Your package is held at customs. Pay Rs 99 release fee at: delivery-customs.in/pay — expires in 24 hours!,1,parcel_customs_fee,0.9874,SCAM,1
+DHL: package held due to unpaid customs duty Rs 249. Pay now to release: cutt.ly/dhl-cust8 Urgent!,1,parcel_customs_fee,0.9766,SCAM,1
+"Bijli vibhag se suchna: aapka electricity meter payment due hai Rs 1,840. Aaj raat tak payment nahi hua to connection kat jayega. Officer se baat karein 90XXXXXX44",1,fake_electricity,0.843,SCAM,1
+"⚡ Electricity Dept: Your power will be disconnected tonight at 9 PM due to overdue bill of Rs 2,500. Call officer immediately: 76XXXXXX89",1,fake_electricity,0.7301,SCAM,1
+"Dear consumer, aapka bijli connection kal subah disconnect ho jayega. Bill baki hai Rs 3,120. Helpline officer: 98XXXXXX33",1,fake_electricity,0.7897,SCAM,1
+URGENT: Aapke {b} account ka KYC expire ho gaya hai. 48 ghante me update karein warna account freeze ho jayega. Click: sbi-kyc-verify.in/update,1,fake_bank_kyc,0.9975,SCAM,1
+HDFC Bank: Your account has been temporarily limited. Complete video KYC now to restore access: hdfc-verify-kyc.xyz/login,1,fake_bank_kyc,0.8982,SCAM,1
+"Dear customer, PAN-Aadhaar link nahi hone ki wajah se aapka account block ho sakta hai. Link karein abhi: pan-aadhaar-link.in/verify",1,fake_bank_kyc,0.9986,SCAM,1
+Jio alert: Aapki SIM aaj raat block ho jayegi. KYC pending hai. Turant update karein: jio-kyc-update.in warna number band ho jayega 📱,1,sim_block,0.7227,SCAM,1
+Your Airtel SIM will be deactivated in 24 hours due to incomplete verification. Update now: airtel-sim-verify.co/kyc,1,sim_block,0.9233,SCAM,1
+Vi: SIM disconnection notice. Aapka number band hone wala hai. Click karein aur apna Aadhaar link karein: vi-kyc.in/verify Urgent!,1,sim_block,0.9983,SCAM,1
+TRAI: Aapka number illegal activities ki wajah se 24 ghante me disconnect ho jayega. Officer se baat karein: 88XXXXXX21,1,sim_block,0.944,SCAM,1
+"Hi {n}, aapka resume shortlist hua hai for Data Entry role at MNC. Registration fee Rs 500 pay karein to confirm your seat: cutt.ly/hr-job9",1,fake_job_hr,0.796,SCAM,1
+"Congratulations! You have been selected for a WFH position. Earn Rs 25,000/month. Pay Rs 999 security deposit to start: bit.ly/wfh-job1",1,fake_job_hr,0.9686,SCAM,1
+"Dear applicant, aapka interview select ho gaya hai. Processing fee Rs 299 pay karein aur apni joining date confirm karein: jobportal-india.xyz",1,fake_job_hr,0.9329,SCAM,1
+"💰 Earn Rs 5,000 daily from home! 100% guaranteed. Join our Telegram group now: t.me/EarnWithUs99 — Limited slots!",1,investment_tips,0.7864,SCAM,1
+"Crypto investment opportunity: 300% return in 7 days! Invest Rs 10,000 and get Rs 30,000. WhatsApp us: 91XXXXXX77",1,investment_tips,0.8056,SCAM,1
+"Stock market tips group: guaranteed Rs 15,000 weekly profit. Join our premium Telegram channel: t.me/StockGuarantee — Only 10 seats left!",1,investment_tips,0.1241,LOOKS SAFE,0
+"Double your money in 15 days! Invest Rs 5,000 get Rs 10,000 back. Guaranteed return. DM us now or call: 85XXXXXX43",1,investment_tips,0.9047,SCAM,1
+"Aapke loan ki EMI miss ho gayi hai. Recovery agent aaj aapke ghar aayega. Turant Rs 3,500 pay karein: bit.ly/loan-pay5 warna legal action hoga",1,loan_threats,0.981,SCAM,1
+"Legal Notice: Aapka personal loan default hai. Court case file hoga agar aaj Rs 8,000 nahi bhare. Call: 70XXXXXX99",1,loan_threats,0.9354,SCAM,1
+"Your BNPL amount of Rs 2,200 is overdue. We will report to CIBIL and send recovery agent. Pay now: loanrecovery.in/pay",1,loan_threats,0.9531,SCAM,1
+"Bhai ye mera naya number hai, purana phone kho gaya 😔 Plz save karo. Ek kaam hai — Rs 3,000 abhi bhej do, kal pakka lautaunga yaar",1,family_impersonation,0.74,SCAM,1
+"Hi, mummy ki taraf se baat kar raha hoon, unka phone kharab ho gaya. Naya number ye hai. Rs 5,000 urgent chahiye, please Paytm kar do: 9XXXXXXXX8",1,family_impersonation,0.7543,SCAM,1
+"Yaar mera phone toot gaya, dost ke phone se message kar raha hoon. Abhi Rs 2,000 GPay kar do bahut zaroori hai bhai. Baad me deta hoon",1,family_impersonation,0.4867,SUSPICIOUS,0
+"Scan this QR code to receive your Rs 1,500 cashback refund from Amazon. Amount credited instantly after scan 📱",1,qr_upi_collect,0.0398,LOOKS SAFE,0
+"Dear customer, aapka Rs 2,000 reward receive karne ke liye ye QR scan karein aur amount enter karein. Agent verified hai.",1,qr_upi_collect,0.4465,SUSPICIOUS,0
+UPI collect request of Rs 500 from PaytmSupport. Scan to approve and receive your pending cashback reward.,1,qr_upi_collect,0.0769,LOOKS SAFE,0
+"Traffic Police Notice: Aapke vehicle pe Rs 1,500 ka challan pending hai. Aaj last date hai. Pay karein warna court summons aayega: trafficfine-pay.in",1,traffic_challan,0.4581,SUSPICIOUS,0
+"E-challan alert: Rs 2,000 traffic violation fine due on your vehicle. Click to pay before midnight: parivahan-echallan.xyz/pay",1,traffic_challan,0.7794,SCAM,1
+Parivahan Dept: Unpaid challan Rs 500 on vehicle. License suspension agle 48 ghante me hogi agar payment nahi hui. Click: challan-pay.in,1,traffic_challan,0.0703,LOOKS SAFE,0
+Delivery attempt failed for your package. Pay Rs 199 redelivery fee to reschedule: bit.ly/redeliver9 — Offer expires tonight!,1,fake_courier_redelivery,0.886,SCAM,1
+BlueDart: Your courier is undelivered. Pay Rs 149 handling fee to release parcel: bluedart-redeliver.in/pay Urgent!,1,fake_courier_redelivery,0.8796,SCAM,1
+Your Amazon package could not be delivered. Rs 99 rescheduling fee required. Pay here: amzn-redeliver.xyz/pay or parcel returned.,1,fake_courier_redelivery,0.3425,LOOKS SAFE,0
+Your HDFC Bank OTP is 847291. Valid for 10 minutes. Do NOT share with anyone. HDFC Bank never asks for OTP.,0,real_otp,0.0048,LOOKS SAFE,1
+752819 is your SBI YONO login OTP. Kisi ke saath share na karein. SBI kabhi OTP nahi maangta.,0,real_otp,0.054,LOOKS SAFE,1
+"Your Axis Bank OTP for card transaction is 614738. Valid 5 mins. If not initiated by you, call 1800-419-5555.",0,real_otp,0.0478,LOOKS SAFE,1
+One-time password for your ICICI Bank login: 983045. This OTP expires in 3 minutes. Never share with anyone.,0,real_otp,0.0275,LOOKS SAFE,1
+"Rs 4,500 debited from your SBI a/c XX4521 on 18-Nov for UPI transfer. If not done by you, call 1800-11-2211 immediately.",0,real_bank_alert,0.0863,LOOKS SAFE,1
+"HDFC Bank: Rs 12,000 credited to your salary account XX8834 on 18-Nov. Available balance updated. Thank you.",0,real_bank_alert,0.028,LOOKS SAFE,1
+"Axis Bank: EMI of Rs 3,200 auto-debited from a/c XX9021 on 15-Nov. Loan balance updated. No action needed.",0,real_bank_alert,0.0469,LOOKS SAFE,1
+"Aapke ICICI account se Rs 850 Amazon pe spend hua. If not you, freeze card at iMobile or call 1800-1080.",0,real_bank_alert,0.0862,LOOKS SAFE,1
+Your Flipkart order #FKT8472913 is out for delivery. Expected by 7 PM today. No payment required at doorstep.,0,delivery_update,0.0085,LOOKS SAFE,1
+Amazon: Aapka order #402-8731924 kal deliver hoga. Delivery partner call karega. Track: amazon.in/orders,0,delivery_update,0.2946,LOOKS SAFE,1
+Meesho: Your order is packed and ready to ship. Tracking number: MSH9284710. Estimated delivery: 20-Nov.,0,delivery_update,0.0097,LOOKS SAFE,1
+Your Myntra order #MYN83921 has been shipped via Delhivery. Track at myntra.com/track — arriving Friday.,0,delivery_update,0.0046,LOOKS SAFE,1
+"Reminder: Your HDFC home loan EMI of Rs 18,500 is due on 5th Dec. Auto-debit se katega. Balance update ke liye app check karein.",0,emi_reminder,0.0481,LOOKS SAFE,1
+"ICICI Bank: Car loan EMI Rs 7,200 due on 1st Dec. Ensure sufficient balance in a/c XX3382. No action needed if auto-pay is on.",0,emi_reminder,0.053,LOOKS SAFE,1
+"Bajaj Finserv: Aapki next EMI Rs 2,800 on 10-Dec. Auto-debit will be attempted. Keep balance ready. -Bajaj Finance",0,emi_reminder,0.0298,LOOKS SAFE,1
+Reminder: Dr. Mehta clinic appointment tomorrow at 10:30 AM. Please arrive 10 mins early. Reply CANCEL to reschedule.,0,appointment_reminder,0.0732,LOOKS SAFE,1
+"Apollo Hospital: Your appointment with Dr. Kapoor is confirmed for 20-Nov at 2 PM, Room 304. Carry original reports.",0,appointment_reminder,0.0159,LOOKS SAFE,1
+Aapka Practo appointment Dr. Singh ke saath kal 11 AM pe hai. Consult link: practo.com/consult/xyz123 — video call hoga.,0,appointment_reminder,0.0611,LOOKS SAFE,1
+Amazon Great Indian Festival: Up to 70% off on mobiles and electronics! Sale ends Sunday. Shop at amazon.in. T&C apply.,0,legit_promo,0.0028,LOOKS SAFE,1
+Swiggy: Order any 2 items and get flat Rs 100 off! Use code SAVE100. Valid today only on orders above Rs 299. T&C apply.,0,legit_promo,0.0131,LOOKS SAFE,1
+Flipkart sale: Big Billion Days — Up to 80% off! Offer valid till midnight. Shop now at flipkart.com. No coupon needed.,0,legit_promo,0.0581,LOOKS SAFE,1
+"Yaar kal college band hai, kya plan hai? Bahar chalein kuch 😂",0,friend_chat,0.0928,LOOKS SAFE,1
+"Bhai urgent — notes bhej de please, kal morning exam hai! 🙏",0,friend_chat,0.245,LOOKS SAFE,1
+"Hey, aaj shaam free ho? Movie dekhne chalein? Naya Marvel wala aa gaya hai",0,friend_chat,0.1294,LOOKS SAFE,1
+"Yaar Rs 200 de de, wallet low hai, baad me transfer kar dunga paise. Paytm ya cash dono chalega",0,friend_chat,0.2141,LOOKS SAFE,1
+"Rs 1,200 refunded to your Flipkart account for returned order #FKT9281. Amount will reflect in 5-7 business days. No action needed.",0,real_refund_credited,0.0307,LOOKS SAFE,1
+Amazon refund of Rs 849 credited to your original payment method (HDFC Credit Card). Check statement in 3-5 days. -Amazon,0,real_refund_credited,0.0253,LOOKS SAFE,1
+Aapke return ka refund Rs 450 Myntra Wallet me add ho gaya hai. Wallet se next purchase pe use karein. -Myntra Care,0,real_refund_credited,0.1761,LOOKS SAFE,1
+Bluedart: Your shipment #BDT928471 is out for delivery today. Partner will call before arriving. No fees at delivery.,0,genuine_courier,0.0059,LOOKS SAFE,1
+Delhivery: Order #DEL8472910 arriving today by 6 PM. Delivery OTP will be shared at doorstep. Track: delhivery.com/track,0,genuine_courier,0.0288,LOOKS SAFE,1
+Ecom Express: Aapka parcel kal deliver hoga. Delivery partner ka number register hua hai. OTP se delivery hogi. -Ecom Express,0,genuine_courier,0.0133,LOOKS SAFE,1
+E-challan for vehicle DL01AB5678: Rs 500 for signal jumping on 15-Nov. Pay ONLY at parivahan.gov.in or nearest RTO. Do NOT pay any agent.,0,legit_challan_notice,0.0383,LOOKS SAFE,1
+"Traffic challan notice: Rs 1,000 fine due on MH12CD3456. Pay at official Parivahan portal only. No third-party payment accepted.",0,legit_challan_notice,0.0172,LOOKS SAFE,1
+Challan Rs 200 due for parking violation. Visit parivahan.gov.in or nearest traffic police counter. Valid till 30-Nov.,0,legit_challan_notice,0.0164,LOOKS SAFE,1
+"Naya number save kar lo — Rs 7,500 mujhi aaj chahiye, bhaiya hospital mein hain. Please Paytm ya GPay karo abhi. Kal pakka lautaunga.",1,family_impersonation,0.7238,SCAM,1
+Your SBI Bank statement for Oct 2024 is ready. Download it at onlinesbi.sbi or via YONO app. No action required.,0,real_bank_alert,0.0102,LOOKS SAFE,1
+Reminder: Your Apollo Pharmacy subscription renews on 25-Nov. Rs 199 auto-debited from registered UPI. No action needed.,0,appointment_reminder,0.0255,LOOKS SAFE,1
+Zomato: Your order #ZMT9281034 is confirmed and being prepared. Estimated delivery: 35 mins. Track in the app.,0,delivery_update,0.0041,LOOKS SAFE,1
+Flipkart: Rs 350 refunded to your original payment method for order #FKT8827. Reflects in 3-5 business days. -Flipkart Care,0,real_refund_credited,0.0193,LOOKS SAFE,1
+DTDC: Shipment #DTC829017 out for delivery. No fees at doorstep. Delivery by 5 PM. Call 1800-XXX-XXXX for queries.,0,genuine_courier,0.0065,LOOKS SAFE,1
+Myntra: Flat 40% off on selected brands this weekend only! Use code STYLE40. Shop at myntra.com. T&C apply.,0,legit_promo,0.0052,LOOKS SAFE,1

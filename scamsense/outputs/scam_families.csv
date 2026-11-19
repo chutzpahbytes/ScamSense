@@ -1,0 +1,11 @@
+family,name,size,avg_scam_prob,avg_new_words,purity,main_kind,top_words,example
+9,bill / hogi / aapka,57,0.851,46.0%,0.561,NEW_electricity,"bill, hogi, aapka, band, karein phonenum, raat","UPI collect request of Rs 1,00,000 from aagent. Scan to approve and receive your"
+1,aapke / wala hai / hone wala,51,0.88,56.5%,0.51,upi_otp,"aapke, wala hai, hone wala, wala, hone, se","Aapke account se Rs 15,000 debit hone wala hai. Cancel karne ke liye apna OTP bh"
+8,sim / to / alert,34,0.841,43.8%,0.618,sim_block,"sim, to, alert, alert click, vi sim, to prevent","TRAI  officer: your SIM linked to 2 criminal cases. Avoid arrest, call now: 98XX"
+3,violation / violation last / today,34,0.937,58.6%,1.0,traffic_challan,"violation, violation last, today, today click, traffic violation, traffic","E-challan  notice: Rs 5,000 due for traffic violation. Last date today. Click cu"
+0,tips / stock / seats join,29,0.98,58.3%,1.0,investment_tips,"tips, stock, seats join, num month, stock tips, seats","STOCK TIPS THAT GUARANTEE RS 25,000/MONTH. LIMITED SEATS. JOIN NOW: TINYURL.COM/"
+4,registration fees / registration / pay karein,29,0.99,41.2%,1.0,fake_job,"registration fees, registration, pay karein, mil gayi, mil, num pay",Congratulations!  Aapko Google me data entry job mil gayi hai. Registration fees
+7,verify / urgent your / verify pan,29,0.921,45.4%,0.724,kyc_block,"verify, urgent your, verify pan, suspended verify, suspended, net",Department  of Telecommunications: your number will be disconnected. Last chance
+5,won / won an / prize in,28,0.974,42.9%,1.0,lottery,"won, won an, prize in, prize, num hours, an iphone",You haave WON an iPhone from Flipkart! Claim your prize in 2 hours sbi-kyc-updat
+6,hai / abhi zaroori / ye mera,27,0.823,44.9%,1.0,family_impersonation,"hai, abhi zaroori, ye mera, ye, number hai, num bhej","MUMMY  PHONE TOOT GAYA, YE MERA NEW NUMBER HAI. RS 5,000 BHEJ DO ABHI ZAROORI HA"
+2,videos / videos aur / time,23,0.938,42.9%,1.0,fake_job,"videos, videos aur, time, time job, num daily, like","Part time job offer: like YouTube videos aur kamaye Rs 9,999 daily. Contact 70XX"

@@ -1,0 +1,203 @@
+{
+  "dataset": {
+    "total_rows": 2262,
+    "unique": 2262,
+    "train": 810,
+    "val": 582,
+    "test": 736,
+    "unseen_electricity": 44,
+    "unseen_gas": 48,
+    "unseen_sim_block": 42
+  },
+  "baseline_known": {
+    "accuracy": 0.939,
+    "precision": 1.0,
+    "recall": 0.897,
+    "f1": 0.946,
+    "unseen_caught": 1.0
+  },
+  "test_set": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "unseen_caught": 1.0
+  },
+  "thresholds": {
+    "scam": 0.5,
+    "suspicious": 0.35
+  },
+  "cv": {
+    "folds": 5,
+    "precision_mean": 0.9792,
+    "precision_std": 0.0416,
+    "recall_mean": 0.886,
+    "recall_std": 0.0975,
+    "f1_mean": 0.9282,
+    "f1_std": 0.065
+  },
+  "ablation": [
+    {
+      "configuration": "Word TF-IDF only",
+      "accuracy": 0.7704,
+      "precision": 0.7211,
+      "recall": 1.0,
+      "f1": 0.838
+    },
+    {
+      "configuration": "Word + Char TF-IDF",
+      "accuracy": 0.7935,
+      "precision": 0.7419,
+      "recall": 1.0,
+      "f1": 0.8519
+    },
+    {
+      "configuration": "Full Model (Word + Char + Cues)",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  ],
+  "realistic_prevalence": {
+    "scam_pct": 5,
+    "precision": 1.0,
+    "recall": 1.0,
+    "false_alarms_per_1k_safe": 0
+  },
+  "decision_tree": {
+    "accuracy": 0.6549,
+    "precision": 0.6324,
+    "recall": 1.0,
+    "f1": 0.7748,
+    "unseen_caught": 0.5455
+  },
+  "independent_realistic_test": {
+    "sample_size": 80,
+    "baseline_score": {
+      "strict": {
+        "accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8889
+      },
+      "flagged": {
+        "accuracy": 0.9375,
+        "precision": 1.0,
+        "recall": 0.875,
+        "f1": 0.9333
+      }
+    },
+    "new_score": {
+      "strict": {
+        "accuracy": 0.9625,
+        "precision": 0.9744,
+        "recall": 0.95,
+        "f1": 0.962
+      },
+      "flagged": {
+        "accuracy": 0.95,
+        "precision": 0.95,
+        "recall": 0.95,
+        "f1": 0.95
+      }
+    }
+  },
+  "discovery": {
+    "inbox_total": 2214,
+    "flagged_total": 1395,
+    "review_queue_total": 341,
+    "workload_reduction_pct": 84.6,
+    "novelty_cutoff_selected": 0.4,
+    "k_selected": 10,
+    "silhouette_score": 0.5298,
+    "adjusted_rand_index": 0.6137,
+    "ari_without_cues": 0.6137,
+    "held_out_campaigns": {
+      "NEW_electricity": {
+        "inbox_count": 44,
+        "queue_count": 44,
+        "recall": 1.0,
+        "queue_share": 0.129
+      },
+      "NEW_sim_block_campaign": {
+        "inbox_count": 42,
+        "queue_count": 42,
+        "recall": 1.0,
+        "queue_share": 0.1232
+      }
+    },
+    "families": [
+      {
+        "id": 0,
+        "name": "tips / stock / seats join",
+        "size": 29,
+        "purity": 1.0,
+        "main_kind": "investment_tips"
+      },
+      {
+        "id": 1,
+        "name": "aapke / wala hai / hone wala",
+        "size": 51,
+        "purity": 0.51,
+        "main_kind": "upi_otp"
+      },
+      {
+        "id": 2,
+        "name": "videos / videos aur / time",
+        "size": 23,
+        "purity": 1.0,
+        "main_kind": "fake_job"
+      },
+      {
+        "id": 3,
+        "name": "violation / violation last / today",
+        "size": 34,
+        "purity": 1.0,
+        "main_kind": "traffic_challan"
+      },
+      {
+        "id": 4,
+        "name": "registration fees / registration / pay karein",
+        "size": 29,
+        "purity": 1.0,
+        "main_kind": "fake_job"
+      },
+      {
+        "id": 5,
+        "name": "won / won an / prize in",
+        "size": 28,
+        "purity": 1.0,
+        "main_kind": "lottery"
+      },
+      {
+        "id": 6,
+        "name": "hai / abhi zaroori / ye mera",
+        "size": 27,
+        "purity": 1.0,
+        "main_kind": "family_impersonation"
+      },
+      {
+        "id": 7,
+        "name": "verify / urgent your / verify pan",
+        "size": 29,
+        "purity": 0.724,
+        "main_kind": "kyc_block"
+      },
+      {
+        "id": 8,
+        "name": "sim / to / alert",
+        "size": 34,
+        "purity": 0.618,
+        "main_kind": "sim_block"
+      },
+      {
+        "id": 9,
+        "name": "bill / hogi / aapka",
+        "size": 57,
+        "purity": 0.561,
+        "main_kind": "NEW_electricity"
+      }
+    ]
+  }
+}

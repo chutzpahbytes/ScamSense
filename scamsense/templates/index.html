@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ScamSense — Hinglish Scam SMS Detector</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f4f8;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:20px}
+.card{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);padding:32px;width:100%;max-width:680px;margin-top:20px}
+h1{font-size:2rem;color:#1a1a2e;margin-bottom:4px}
+.subtitle{color:#666;margin-bottom:24px;font-size:.95rem}
+textarea{width:100%;min-height:120px;border:2px solid #e0e0e0;border-radius:10px;padding:12px;font-size:.95rem;font-family:inherit;resize:vertical;transition:border-color .2s}
+textarea:focus{outline:none;border-color:#3b82f6}
+.btn{display:inline-block;padding:12px 28px;border-radius:10px;border:none;cursor:pointer;font-size:1rem;font-weight:600;transition:all .15s}
+.btn-primary{background:#3b82f6;color:#fff;width:100%;margin-top:12px}
+.btn-primary:hover{background:#2563eb}
+.btn-primary:disabled{background:#93c5fd;cursor:not-allowed}
+.examples{margin:16px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:6px 14px;border-radius:20px;border:1.5px solid;cursor:pointer;font-size:.82rem;font-weight:500;background:#fff;transition:all .15s}
+.chip.scam{border-color:#ef4444;color:#ef4444}.chip.scam:hover{background:#fef2f2}
+.chip.safe{border-color:#22c55e;color:#22c55e}.chip.safe:hover{background:#f0fdf4}
+.result{margin-top:24px;padding:20px;border-radius:12px;display:none;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.result.scam{background:#fef2f2;border:1.5px solid #fca5a5}
+.result.suspicious{background:#fffbeb;border:1.5px solid #fcd34d}
+.result.safe{background:#f0fdf4;border:1.5px solid #86efac}
+.verdict{font-size:1.6rem;font-weight:800;margin-bottom:4px}
+.verdict.scam{color:#dc2626}.verdict.suspicious{color:#d97706}.verdict.safe{color:#16a34a}
+.score{font-size:.9rem;color:#555;margin-bottom:12px}
+.reasons{list-style:none;padding:0}
+.reasons li{padding:4px 0;padding-left:18px;position:relative;font-size:.93rem;color:#333}
+.reasons li::before{content:'•';position:absolute;left:4px;color:#666}
+.spinner{display:none;text-align:center;margin-top:16px;color:#666;font-size:.9rem}
+.spinner::after{content:'';display:inline-block;width:18px;height:18px;border:3px solid #e0e0e0;border-top-color:#3b82f6;border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle;margin-left:8px}
+@keyframes spin{to{transform:rotate(360deg)}}
+footer{margin-top:24px;text-align:center;color:#888;font-size:.8rem;max-width:680px}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>🔍 ScamSense</h1>
+  <p class="subtitle">Paste an SMS or WhatsApp message — get a verdict and plain-language reasons, instantly.</p>
+  <textarea id="msg" placeholder="Paste your message here...&#10;&#10;Example: Dear customer, aapka account band ho jayega. KYC update karein abhi: sbi-kyc.in"></textarea>
+  <button class="btn btn-primary" onclick="checkMsg()">Check Message</button>
+  <div class="examples">
+    <span class="chip scam" onclick="load('Dear customer, aapka SBI account aaj band ho jayega. KYC update karein: sbi-kyc-update.in/login Urgent!')">🔴 KYC Scam</span>
+    <span class="chip scam" onclick="load('Income tax refund of Rs 15490 approved. Submit your bank details at incometax-refund.in to receive.')">🔴 Tax Refund Scam</span>
+    <span class="chip safe" onclick="load('742891 is your OTP for HDFC Bank transaction. Valid 10 minutes. Do not share with anyone. -HDFC Bank')">🟢 Real OTP</span>
+    <span class="chip safe" onclick="load('Bhai kal match dekhne chalein? Shaam 7 baje milte hain stadium ke bahar.')">🟢 Friend Chat</span>
+  </div>
+  <div class="spinner" id="spinner">Checking message...</div>
+  <div class="result" id="result">
+    <div class="verdict" id="verdict"></div>
+    <div class="score" id="score"></div>
+    <ul class="reasons" id="reasons"></ul>
+  </div>
+</div>
+<footer>ScamSense runs on a server — your message is sent to check but never stored. Not a guarantee. Always verify with your bank's official app or website.</footer>
+<script>
+function load(t){document.getElementById('msg').value=t}
+async function checkMsg(){
+  const text=document.getElementById('msg').value.trim();
+  if(!text){alert('Please paste a message first.');return;}
+  const btn=document.querySelector('.btn-primary');
+  btn.disabled=true;
+  document.getElementById('spinner').style.display='block';
+  document.getElementById('result').style.display='none';
+  try{
+    const r=await fetch('/api/check',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text})});
+    const d=await r.json();
+    if(d.error){alert(d.error);return;}
+    const vc=d.verdict==='SCAM'?'scam':d.verdict==='SUSPICIOUS'?'suspicious':'safe';
+    const vt=document.getElementById('verdict');
+    vt.textContent=d.verdict; vt.className='verdict '+vc;
+    document.getElementById('score').textContent='Scam score: '+d.score+'%';
+    const ul=document.getElementById('reasons'); ul.innerHTML='';
+    d.reasons.forEach(r=>{const li=document.createElement('li');li.textContent=r;ul.appendChild(li);});
+    const res=document.getElementById('result'); res.className='result '+vc; res.style.display='block';
+  }catch(e){alert('Error connecting to server. Please try again.');}
+  finally{btn.disabled=false;document.getElementById('spinner').style.display='none';}
+}
+document.getElementById('msg').addEventListener('keydown',e=>{if(e.ctrlKey&&e.key==='Enter')checkMsg();});
+</script>
+</body>
+</html>
