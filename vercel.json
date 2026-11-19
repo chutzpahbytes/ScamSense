@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "builds": [{"src": "scamsense/api/index.py", "use": "@vercel/python"}],
+  "routes": [
+    {"src": "/api/check", "dest": "scamsense/api/index.py"},
+    {"src": "/(.*)", "dest": "scamsense/api/index.py"}
+  ]
+}
